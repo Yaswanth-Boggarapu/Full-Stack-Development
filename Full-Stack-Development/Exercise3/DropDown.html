@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drop Down</title>
+        <style>
+
+            .headder
+            {
+                display: inline-block;
+                background-color: rosybrown
+            }
+            .headder
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            ul li
+            {
+                display:inline-block;
+                list-style: none;
+                margin: 10px 20px;
+            }
+            ul li a
+            {
+                text-decoration: none;
+                font-size: 18px;
+                position:relative;
+                padding: 10px 30px;
+            }
+            #dropdown
+            {
+                display: none;
+                position: absolute;
+                background-color: #fff;
+                min-width: 185px;
+            }
+            #link1 a
+            {
+                padding: 10px 30px;
+            }
+            #link1:hover
+            {
+                background-color: #ddd;
+                padding: 10px 30px;
+            }
+            #dropdown a
+            {
+                margin: 0;
+                display: block;
+                font-size: 18px;
+                background-color: #ddd;
+                color: black;
+                text-decoration: none;
+            }
+            img
+            {
+                position: relative;
+                left:600px;
+                padding: 50px;
+                height: 500px;
+                width: 550px;
+
+            }                       
+        </style>
+        <script>
+        function show_hide()
+        {
+            var click = document.getElementById("dropdown");
+            click.style.display = "block";
+        }
+        function hide()
+        {
+            var click = document.getElementById("dropdown");
+            click.style.display= "none";
+        }
+        </script>
+    </head>
+    <body>
+        <div class="headder">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" id="link1" onmouseover="show_hide()" onmouseout="hide()">Departments
+            <div id="dropdown">
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">AI&DS</a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">CSE</a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">IT</a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">MECH </a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">ECE</a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">EEE</a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">BioTech</a>
+                <a href="#"onmouseover="show_hide()" onmouseout="hide()">BioMed</a>
+             </div>            
+            </a></li>
+        </ul>
+        </div>
+        <img src="Mepco.jpg" alt="logo">
+    </body>
+</html>

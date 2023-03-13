@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PopUpBlocker</title>
+  </head>
+  <body>
+    <script>
+          function detectPopupBlocker() {
+            var myTestPopup = window.open("", "", "directories=no,height=100,width=100,menubar=no,resizable=no,scrollbars=no,status=no,titlebar=no,top=0,location=no");
+            if (!myTestPopup) 
+            {
+              // Pop-up was blocked
+              window.location.href = "error.html";
+            } else {
+              myTestPopup.close();
+            }
+          }
+
+
+          window.onload = detectPopupBlocker;
+    </script>
+  </body>
+</html>
+
+

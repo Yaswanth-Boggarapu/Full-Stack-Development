@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hex Codes</title>
+        <script>
+
+        function Changecolor(x)
+        {
+          var colorchange=x.innerHTML;
+          x.style.color=colorchange;
+        }                        
+        </script>
+        <style>
+            table
+            {
+                font-size: medium;
+            }
+        </style>
+    </head>
+    <body bgcolor="ivory">
+        <center><table border="1" cellpadding="30px">
+            <h1>Place the pointer on any of the Hex code to reveal it's color</h1>
+            <tr>
+                <td colspan="4" align="center"> <h3>Hex Codes</h3> </td>
+            </tr>
+            <tr>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#ff0000</p></td>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#2b00ff</p></td>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#009933</p></td>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#ffff00</p></td>            
+            </tr>
+            <tr>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#FFC0CB</p></td>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#808080</p></td>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#00FFFF</p></td>
+                <td><p onmouseover="Changecolor(this)" onmouseout="this.style.color='black';">#B6D0E2</p></td>
+            </tr>
+        </table></center>
+    </body>
+</html>

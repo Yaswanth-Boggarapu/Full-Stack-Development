@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script>
+            function welcome()
+            {
+                window.alert("Welcome");
+            }
+        </script>
+    </head>
+    <body bgcolor="lavender">
+        <div class="heading">
+            <h1 style="background: powderblue;"><center>Registration Form</center></h1>
+        </div>
+        <table border="0" align="center">
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" placeholder="Luffy"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>            
+            <tr>
+                <td><label>Department</label></td>
+                <td>
+                    <select>
+                        <option>B.Tech AID</option>
+                        <option>B.Tech IT</option>
+                        <option>B.Tech BioTech</option>
+                        <option>BE CSE</option>
+                        <option>BE ECE</option>
+                        <option>BE EEE</option>
+                        <option>BE Mech</option>
+                        <option>BE BioMed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>            
+            <tr>
+                <td><label>College</label></td>
+                <td><input type="text" placeholder="MEPCO Schlenk"></td>
+            </tr>            
+            <tr>
+                <td><br></td>
+            </tr>            
+            <tr>
+                <td><label>Year</label></td>
+                <td>
+                    <input type="radio" name="year"><label>1<sup>st</sup></label>
+                    <input type="radio" name="year"><label>2<sup>nd</sup></label>
+                    <input type="radio" name ="year"><label>3<sup>rd</sup></label>
+                    <input type="radio" name ="year"><label>4<sup>th</sup></label>
+                </td>
+            </tr>            
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><label>Phone Number</label></td>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea rows="5" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>                       
+            <tr>
+                <td><label>Mail Id</label></td>
+                <td><input type="email" placeholder="luffy@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>            
+            <tr>
+                <td><label>Date of Event</label></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>            
+            <tr>
+                <td><label>Number of Events</label></td>
+                <td><input type="range"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>            
+            <tr>
+                <td><label>Event List</label></td>
+                <td>
+                    <input type="checkbox">
+                    <label>Paper Presentation</label>
+                    <input type="checkbox">
+                    <label>Faculty Development Program</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>Debugging</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox">
+                    <label>Symposium</label>
+                    <input type="checkbox">
+                    <label>Others</label>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td colspan="2"><center><input type="submit" onclick="welcome()"></center></td>
+            </tr>
+        </table>
+    </body>
+</html>

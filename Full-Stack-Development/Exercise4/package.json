@@ -1,0 +1,22 @@
+{
+  "name": "mailapplication",
+  "version": "1.0.0",
+  "description": "It is a mail application developed by Yaswanth B",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "mail"
+  ],
+  "author": "Yaswanth",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "nodemailer": "^6.9.1",
+    "url": "^0.11.0"
+  }
+}
