@@ -1,26 +1,21 @@
-var http = require('http');
-var PORT = 8081;
-var bp = require('body-parser');
-var express = require('express');
-var app = express();
+var http = require("http");
+var exp = require("express");
+var router = exp();
+var bodyparser = require("body-parser");
 
+router.use(bodyparser.urlencoded({ extended : true}));
 
-app.use(bp.urlencoded({extended:true}));
-
-
-app.get("/",(req,res)=>{
-    res.sendFile(__dirname+'/01input.html')
+router.get('/',function(req,res){
+    res.sendFile(__dirname+'/Form.html')
 });
 
-var Server = app.post('/submit', (req,res)=>{
-    input = req.body.input;
-    var count = input.length;
+var server = router.post('/send',function(req,res){
+    const text = req.body.box;
+    const count = text.length;
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write(JSON.stringify(count));
     res.end();
-}
-);
-http.createServer(Server).listen(PORT,()=>
-{
-    console.log(`listening at ${PORT}`);
-})
+});
+
+http.createServer(server).listen(8080,()=>{
+    console.log("Server Listening")});
