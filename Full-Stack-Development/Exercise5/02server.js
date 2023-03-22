@@ -1,4 +1,5 @@
 var net = require("net");
+var input;
 var server = net.createServer(function(connection) 
 {
     console.log('Client connected.');
@@ -6,8 +7,10 @@ var server = net.createServer(function(connection)
     {
         console.log('Client disconnected.');
     });
-    connection.write("Yash");
+
+    connection.write("Moshi moshi orewa kaizokuoa ni naru otoko dha!!");
     connection.pipe(connection);
+    
 });
 
 server.listen(8000, function() 
