@@ -1,5 +1,4 @@
 var net = require("net");
-var input;
 var server = net.createServer(function(connection) 
 {
     console.log('Client connected.');
