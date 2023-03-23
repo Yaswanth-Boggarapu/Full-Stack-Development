@@ -1,0 +1,56 @@
+[{
+    "name": "Luffy",
+    "Deep Learning": 90,
+    "Full Stack Development": 95,
+    "Software Engineering": 90,
+    "CE": 90,
+    "AE":85,
+    "OE":95
+
+},
+
+{
+    "name": "Naruto",
+    "Deep Learning": 90,
+    "Full Stack Development": 95,
+    "Software Engineering": 80,
+    "CE": 80,
+    "AE":95,
+    "OE":75    
+},
+{
+    "name": "Ichigo",
+    "Deep Learning": 80,
+    "Full Stack Development": 85,
+    "Software Engineering": 70,
+    "CE": 80,
+    "AE":95,
+    "OE":85    
+},
+{
+    "name": "Zoro",
+    "Deep Learning": 90,
+    "Full Stack Development": 95,
+    "Software Engineering": 90,
+    "CE": 90,
+    "AE":95,
+    "OE":95     
+},
+{
+    "name": "Sasuke",
+    "Deep Learning": 70,
+    "Full Stack Development": 85,
+    "Software Engineering": 70,
+    "CE": 80,
+    "AE":95,
+    "OE":95     
+},
+{
+    "name": "Sadho",
+    "Deep Learning": 80,
+    "Full Stack Development": 85,
+    "Software Engineering": 70,
+    "CE": 80,
+    "AE":95,
+    "OE":85     
+}]
