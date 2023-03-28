@@ -33,6 +33,8 @@
 .currentSlide {
   transition-duration: 0.5s ease;
   opacity: 0;
+  margin-left: 450px;
+  margin-top: 100px;
 }
 .currentSlide.active {
   opacity: 1;

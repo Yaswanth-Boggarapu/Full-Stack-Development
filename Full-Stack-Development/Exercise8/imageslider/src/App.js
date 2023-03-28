@@ -3,24 +3,27 @@ import { useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./App.css";
-
+import img1 from "./images/1.jpg"
+import img2 from "./images/2.jpg"
+import img3 from "./images/3.jpg"
+import img4 from "./images/4.jpg"
+import img5 from "./images/5.jpg"
 function App() {
   const Images =[    
     {
-      url: "C://Users//HP//Desktop//Taboo//Sem VI//LAB//Full Stack Development//Full-Stack-Development//Exercise8//imageslider//src//images//1.jpg"
+      url: img1
     },
     {
-      url: "C://Users//HP//Desktop//Taboo//Sem VI//LAB//Full Stack Development//Full-Stack-Development//Exercise8//imageslider//src//images//2.jpg"
-    },
-
-    {
-      url: "C://Users//HP//Desktop//Taboo//Sem VI//LAB//Full Stack Development//Full-Stack-Development//Exercise8//imageslider//src//images//3.jpg"
+      url: img2
     },
     {
-      url: "C://Users//HP//Desktop//Taboo//Sem VI//LAB//Full Stack Development//Full-Stack-Development//Exercise8//imageslider//src//images//4.jpg"
+      url: img3
     },
     {
-      url: "C://Users//HP//Desktop//Taboo//Sem VI//LAB//Full Stack Development//Full-Stack-Development//Exercise8//imageslider//src//images//5.jpg"
+      url: img4
+    },
+    {
+      url: img5
     }                
   ];
   const [activeImage, setCurrent] = useState(0);

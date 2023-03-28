@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+//import './App.css'
+const data = [
+  { id: 1, name: "Your Lie in April" },
+  { id: 2, name: "One Punch Man" },
+  { id: 3, name: "One Piece" },
+  { id: 4, name: "My Hero Academia" },
+  { id: 5, name: "Parasyte" },
+  { id: 6, name: "Overflow" },
+  { id: 7, name: "Dragon Ball"},
+  { id: 8, name: "That time I Got Reincarnated as Slime" },
+  { id: 9, name: "Hunter X Hunter" },
+  { id: 10, name: "Fairy Tail" }
+];
 
-function App() {
+const SearchFilter = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="input">
+      <input
+        type="text"
+        placeholder="Enter the intput"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      {filteredData.map((item) => (
+        <div key={item.id}>{item.name}</div>
+      ))}
     </div>
   );
-}
+};
 
-export default App;
+export default SearchFilter;
