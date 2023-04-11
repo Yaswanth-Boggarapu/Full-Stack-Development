@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "title": "One piece",
+      "author": "Eichiro Oda",
+      "publisher": "TOEI Anime",
+      "release_year": 1999,
+      "image": "./images/op.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Naruto",
+      "author": "Kishimoto",
+      "publisher": "Parrot",
+      "release_year": 1997,
+      "image": "./images/naruto.jpg"
+    },
+    {
+      "id": 3,
+      "title": "DragonBallZ",
+      "author": "Akirotoriama",
+      "publisher": "TOEI Anime",
+      "release_year": 1998,
+      "image": "./images/db.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Jujutsukaisen",
+      "author": "Eichiro Oda",
+      "publisher": "Mappa",
+      "release_year": 2016,
+      "image": "./images/jjk.jpg"
+    }
+];
