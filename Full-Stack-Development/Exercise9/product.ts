@@ -29,4 +29,4 @@ interface Product {
  
   // Example usage:
   displayProductDetails(1); // prints details of Product 1
-  displayProductDetails(3  ); // prints "Product with ID 4 not found"
+  displayProductDetails(4); // prints "Product with ID 4 not found"
