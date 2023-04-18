@@ -15,8 +15,8 @@ function App() {
     <div>
       <h1>Count: {count}</h1>
       <div>
-        <button onClick={increment} href='#'>+</button>
-        <button onClick={decrement} href='#'>-</button>
+        <button onClick={increment} >+</button>
+        <button onClick={decrement} >-</button>
       </div>
 
     </div>
