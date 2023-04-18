@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./App.css"
 function App() {
   const [count, setCount] = useState(0);
 
@@ -14,8 +14,11 @@ function App() {
   return (
     <div>
       <h1>Count: {count}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <div>
+        <button onClick={increment} href='#'>+</button>
+        <button onClick={decrement} href='#'>-</button>
+      </div>
+
     </div>
   );
 }
