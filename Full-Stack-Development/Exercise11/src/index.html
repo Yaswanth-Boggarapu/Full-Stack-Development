@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<p>
+    <h1><%= htmlWebpackPlugin.options.header%></h1>
+    <p><%= htmlWebpackPlugin.options.body%></p>
+    
+    <div id="wrapper" style="height:120px">
+        <div class="panel">
+            <input type="text" id="username"><br>
+            <input type="password" id="password">
+            <input type="submit" id="sub">
+            <p id="prompt"></p>
+        </div>
+    </div>
+    <div id="zoom-scene"></div>
+</body>
+</html>

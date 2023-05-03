@@ -1,17 +1,24 @@
 {
-  "name": "exercise11",
+  "name": "11ex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^5.5.1",
-    "webpack": "^5.79.0",
-    "webpack-cli": "^5.0.1"
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "dependencies": {
+    "@egjs/flicking": "^4.10.7",
+    "panzoom": "^9.4.3"
   }
 }
