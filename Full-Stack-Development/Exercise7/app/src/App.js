@@ -1,76 +1,63 @@
-import React from "react";
-import marks from './marks.json'
-import "./App.css"
-import { useTable } from "react-table";
+import React, { useState } from 'react';
+
 function App() {
-  const data = React.useMemo(()=>marks, []);
-  const columns = React.useMemo(
-    ()=>[
-    {
-      Headers : "Name",
-      accessor: "name"
-    },
-    {
-      Headers : "Deep Learning",
-      accessor: "Deep Learning"
-    },
-    {
-      Headers : "Full Stack Development",
-      accessor: "Full Stack Development"
-    },
-    {
-      Headers : "Software Engineering",
-      accessor: "Software Engineering"
-    },
-    {
-      Headers : "Core Elective",
-      accessor: "CE"
-    },
-    {
-      Headers : "Allied Elective",
-      accessor: "AE"
-    },  
-    {
-      Headers : "Open Elective",
-      accessor: "OE"
-    },  
-  ],
-   []);
- 
-  const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable({columns, data});
- 
+  const [marks, setMarks] = useState([]);
+  const [newMark, setNewMark] = useState({ subject: '', score: '' });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setNewMark((prevMark) => ({ ...prevMark, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setMarks([...marks, newMark]);
+    setNewMark({ subject: '', score: '' });
+  };
+
   return (
-    <div className="App">
-      <div className="container">
-        <table {...getTableProps()}>
-          <thead>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((columns) => (
-                  <th {...columns.getHeaderProps()}>
-                    {columns.render("Headers")}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()}>
-                  {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+    <div>
+      <h2>Enter Mark Details:</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Subject:
+          <input
+            type="text"
+            name="subject"
+            value={newMark.subject}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Score:
+          <input
+            type="text"
+            name="score"
+            value={newMark.score}
+            onChange={handleInputChange}
+          />
+        </label>
+        <button type="submit">Add Mark</button>
+      </form>
+
+      <table border={1}>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {marks.map((mark, index) => (
+            <tr key={index}>
+              <td>{mark.subject}</td>
+              <td>{mark.score}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-
 }
 
 export default App;
