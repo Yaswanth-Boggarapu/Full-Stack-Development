@@ -1,30 +1,186 @@
+<!DOCTYPE html>
 
 <html>
-	<head>
-		<title>Fifteen Puzzle</title>
-		<meta charset="utf-8" />
+    <head>
+        <title>Sliding Puzzle</title>
+    </head>
+    <style>
+        .table{
+            border-style:ridge;
+            padding: 10px;
+            border-spacing: 5px;
+            overflow: hidden;
+            table-layout: fixed;
+        }
 
-		<link rel="stylesheet" type="text/css" href="fifteen.css" />
+        th{
+            background-color:blueviolet;
+        }
 
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-		<script src="fifteen.js" type="text/javascript"></script>
-	</head>
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+        }
 
-	<body>
-		<h1>Fifteen Puzzle</h1>
+        button{
+            margin-top: 100px;
+            background-color:burlywood;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 44%;
+        }
 
-		<div id="overall">
-			<div id="puzzlearea">
-				<!-- the following are the fifteen puzzle pieces -->
-				<div>1</div>  <div>2</div>  <div>3</div>  <div>4</div>
-				<div>5</div>  <div>6</div>  <div>7</div>  <div>8</div>
-				<div>9</div>  <div>10</div> <div>11</div> <div>12</div>
-				<div>13</div> <div>14</div> <div>15</div>
-			</div>
+        button:hover{
+            margin-top: 100px;
+            background-color:aliceblue;
+            border: none;
+            color:burlywood;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 44%;
+            transition: 0.5s;
+        }
 
-			<div id="controls">
-			<button id="shufflebutton">Restart</button>
-			</div>
-		</div>
-	</body>
+        .empty{
+            background-color: red;
+        }
+
+        .table2
+        {
+            margin-left:530px;
+        }
+    </style>
+
+    <script>
+
+        function shuffleArray(array)
+        {
+            for (var i = 16 - 1; i >= 0; i--) {
+
+                var j = Math.floor(Math.random() * (i + 1));
+
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+
+            return array;
+        }
+
+
+        function shuffle_table()
+        {
+
+            var one = document.getElementById("0").innerHTML
+            var two = document.getElementById("1").innerHTML
+            var three = document.getElementById("2").innerHTML
+            var four = document.getElementById("3").innerHTML
+            var five = document.getElementById("4").innerHTML
+            var six = document.getElementById("5").innerHTML
+            var seven = document.getElementById("6").innerHTML
+            var eight = document.getElementById("7").innerHTML
+            var nine = document.getElementById("8").innerHTML
+            var ten = document.getElementById("9").innerHTML
+            var eleven = document.getElementById("10").innerHTML
+            var twelve = document.getElementById("11").innerHTML
+            var thirteen = document.getElementById("12").innerHTML
+            var fourteen = document.getElementById("13").innerHTML
+            var fifteen = document.getElementById("14").innerHTML
+            var sixteen = document.getElementById("15").innerHTML
+
+
+            let arr = new Array()
+            arr.push(one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen)
+
+            shuffleArray(arr)
+
+            for(var i=0;i<=15;i++)
+            {
+                var num = i.toString()
+                document.getElementById(num).innerHTML = arr[i]
+            }
+
+        }
+
+        function start_new_game()
+        {
+            window.location.reload()
+        }
+
+        function tile_out(elem)
+        {
+            elem.style.backgroundColor="blueviolet";
+            elem.style.transition="0.5s";
+        }
+
+        function tiles(elem)
+        {
+            elem.style.backgroundColor = "red"
+            elem.style.transition = "0.5s";
+            var start = elem.getAttribute("id")
+            var a;
+            var pos;
+            for(var i=0;i<=15;i++)
+            {
+                a = i.toString()
+                if(document.getElementById(a).innerHTML == "")
+                {
+                    pos = i;
+                    break;
+                }
+            }
+            if(pos+1 == start || pos-1 == start || pos-4 == start || pos+4 == start)
+            {
+                var x = pos.toString()
+                var y = start.toString()
+                var temp = document.getElementById(x).innerHTML;
+                document.getElementById(x).innerHTML = document.getElementById(y).innerHTML;
+                document.getElementById(y).innerHTML = '';
+            }
+        }
+    </script>
+
+    <body>
+        <h1 align="center">Sliding Puzzle Problem Using HTML CSS AND JS</h1>
+        <table align="center" border="1" height="500" width="500" class="table">
+            <tr>
+                <th id="0" onclick="tiles(this)" onmouseout="tile_out(this)">1</th>
+                <th id="1" onclick="tiles(this)" onmouseout="tile_out(this)">2</th>
+                <th id="2" onclick="tiles(this)" onmouseout="tile_out(this)">3</th>
+                <th id="3" onclick="tiles(this)" onmouseout="tile_out(this)">4</th>
+            </tr>
+            <tr>
+                <th id="4" onclick="tiles(this)" onmouseout="tile_out(this)">5</th>
+                <th id="5" onclick="tiles(this)" onmouseout="tile_out(this)">6</th>
+                <th id="6" onclick="tiles(this)" onmouseout="tile_out(this)">7</th>
+                <th id="7" onclick="tiles(this)" onmouseout="tile_out(this)">8</th>
+            </tr>
+            <tr>
+                <th id="8" onclick="tiles(this)" onmouseout="tile_out(this)">9</th>
+                <th id="9" onclick="tiles(this)" onmouseout="tile_out(this)">10</th>
+                <th id="10" onclick="tiles(this)" onmouseout="tile_out(this)">11</th>
+                <th id="11" onclick="tiles(this)" onmouseout="tile_out(this)">12</th>
+            </tr>
+            <tr>
+                <th id="12" onclick="tiles(this)" onmouseout="tile_out(this)">13</th>
+                <th id="13" onclick="tiles(this)" onmouseout="tile_out(this)">14</th>
+                <th id="14" onclick="tiles(this)" onmouseout="tile_out(this)">15</th>
+                <th id="15" onclick="tiles(this)" value = "empty" onmouseout="tile_out(this)"></th>
+            </tr>
+        </table>
+        <table align="center" class="table2">
+            <tr>
+                <td><button onclick="shuffle_table()">Click To Shuffle</button></td>
+                <td><button onclick="start_new_game()">Start New Game</button></td>
+            </tr>
+        </table>
+
+    </body>
 </html>

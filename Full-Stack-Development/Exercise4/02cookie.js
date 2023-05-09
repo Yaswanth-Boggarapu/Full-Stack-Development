@@ -9,7 +9,8 @@ var server = http.createServer(function(request, response) {
         var cookieValue = "123456";
         var expiryDate = new Date();
         expiryDate.setDate(expiryDate.getDate() + 1);
-        var cookieText = cookieName + '=' + cookieValue + ';expires='+ expiryDate.toUTCString() + ';';response.setHeader('Set-Cookie', cookieText);
+        var cookieText = cookieName + '=' + cookieValue + ';expires='+ expiryDate.toUTCString() + ';';
+        response.setHeader('Set-Cookie', cookieText);
         response.writeHead(302, {
             'Location': '/'
         });

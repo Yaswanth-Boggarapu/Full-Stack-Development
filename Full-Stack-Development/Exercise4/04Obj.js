@@ -10,4 +10,7 @@ delete user.last_name;
 console.log(user);
 var length = Object.keys(user).length;
 console.log(length);
-    
+
+const prompt = require('prompt-sync')()
+
+var num = parseInt(prompt('Enter number'));
